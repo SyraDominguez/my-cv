@@ -1,3 +1,8 @@
+.hidden {
+  display: none;
+}
+
+/* Otros estilos existentes */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -6,10 +11,78 @@ body {
   background-color: #f4f4f4;
 }
 
-header {
-  background: #333;
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sidebar {
+  background: #007bff;
   color: #fff;
-  padding: 1em 0;
+  padding: 20px;
+  width: 300px;
+}
+
+.sidebar .photo img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+.sidebar h2 {
+  margin-top: 20px;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 5px;
+}
+
+.sidebar p,
+.sidebar ul {
+  margin: 10px 0;
+}
+
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+.contact-info i {
+  margin-right: 10px;
+}
+
+.actions {
+  margin-top: 20px;
+}
+
+.actions button {
+  display: block;
+  width: 100%;
+  background: #0056b3;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.actions button:hover {
+  background: #004494;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+header {
+  background: #007bff;
+  color: #fff;
+  padding: 10px 20px;
   text-align: center;
 }
 
@@ -18,31 +91,31 @@ header h1 {
 }
 
 section {
-  padding: 1em 2em;
-  background: #fff;
-  margin: 1em auto;
-  max-width: 800px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
 }
 
 h2 {
-  border-bottom: 2px solid #333;
-  padding-bottom: 0.5em;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 5px;
 }
 
-.contact a,
-.footer a {
-  color: #333;
-  text-decoration: none;
+.job,
+.projects ul {
+  margin: 10px 0;
 }
 
-.job {
-  margin-bottom: 1em;
+.projects ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.projects ul li {
+  margin-bottom: 10px;
 }
 
 footer {
   text-align: center;
-  padding: 1em 0;
-  background: #333;
+  padding: 10px;
+  background: #007bff;
   color: #fff;
 }

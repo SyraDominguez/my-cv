@@ -5,138 +5,326 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CV Silvia Ramírez Domínguez</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="icon" type="image/png" href="images/Logo.png" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
   </head>
   <body>
-    <header>
-      <h1>Silvia Ramírez Domínguez</h1>
-      <p>
-        Apasionada por la tecnología y en proceso de transición hacia una
-        carrera en desarrollo web.
-      </p>
-    </header>
-    <section class="contact">
-      <h2>Contacto</h2>
-      <p>
-        Email:
-        <a href="mailto:syradominguez.dev@gmail.com"
-          >syradominguez.dev@gmail.com</a
-        >
-      </p>
-      <p>Teléfono: 640532081</p>
-      <p>
-        LinkedIn:
-        <a href="https://linkedin.com/in/syradominguez"
-          >linkedin.com/in/syradominguez</a
-        >
-      </p>
-      <p>
-        GitHub:
-        <a href="https://github.com/SyraDominguez">github.com/SyraDominguez</a>
-      </p>
-    </section>
-    <section class="profile">
-      <h2>Perfil Profesional</h2>
-      <p>
-        Apasionada por la tecnología y en proceso de transición hacia una
-        carrera en desarrollo web. Actualmente cursando un Bootcamp de
-        Desarrollo Web Fullstack, con sólidos conocimientos en HTML, CSS,
-        JavaScript, y experiencia en proyectos web. Habilidad para combinar
-        conocimientos previos en atención al cliente y gestión administrativa
-        con nuevas competencias técnicas para ofrecer soluciones eficientes y
-        efectivas.
-      </p>
-    </section>
-    <section class="skills">
-      <h2>Habilidades Técnicas</h2>
-      <ul>
-        <li>
-          <strong>Lenguajes de Programación:</strong> HTML5, CSS3 (SASS,
-          Flexbox, Bootstrap), JavaScript, Python
-        </li>
-        <li>
-          <strong>Herramientas y Tecnologías:</strong> GIT/GitHub, VSCode,
-          Terminal/Bash
-        </li>
-        <li>
-          <strong>Otros:</strong> Inglés Nivel B1, Curso de perfeccionamiento de
-          Inglés a nivel conversacional
-        </li>
-      </ul>
-    </section>
-    <section class="education">
-      <h2>Educación y Formación</h2>
-      <p><strong>Bootcamp Desarrollo Web Fullstack</strong> (En curso)</p>
-    </section>
-    <section class="projects">
-      <h2>Proyectos Personales</h2>
-      <ul>
-        <li>
-          Desarrollo de una página web personal utilizando HTML, CSS y
-          JavaScript para mostrar el portafolio de proyectos.
-        </li>
-        <li>Contribución a proyectos de código abierto en GitHub.</li>
-      </ul>
-    </section>
-    <section class="experience">
-      <h2>Experiencia Laboral</h2>
-      <div class="job">
-        <h3>Medtronic</h3>
-        <p><strong>Puesto:</strong> Recepcionista - Facility Assistant</p>
-        <p><strong>Fechas:</strong> Diciembre 2023 - Actualmente</p>
-        <p>
-          <strong>Descripción:</strong> Funciones de recepcionista en el almacén
-          de la compañía. Apoyo a funciones del departamento de facility:
-          gestión mantenimiento, suministros, control de residuos, compras.
-        </p>
-      </div>
-      <div class="job">
-        <h3>Allianz Global Assistance</h3>
-        <p><strong>Puesto:</strong> Gestora Telefónica Administrativa</p>
-        <p><strong>Fechas:</strong> Julio 2014 - Enero 2016</p>
-        <p>
-          <strong>Descripción:</strong> Atención a asegurados y empresas cliente
-          en el departamento de asistencia en carretera.
-        </p>
-      </div>
-      <div class="job">
-        <h3>Sergesi</h3>
-        <p><strong>Puesto:</strong> Gestora de Siniestros</p>
-        <p><strong>Fechas:</strong> Julio 2023 - Noviembre 2023</p>
-        <p>
-          <strong>Descripción:</strong> Atención a mutualistas en el
-          departamento de Siniestros de Automóvil.
-        </p>
-      </div>
-      <div class="job">
-        <h3>RACC</h3>
-        <p><strong>Puesto:</strong> Gestora Telefónica Administrativa</p>
-        <p><strong>Fechas:</strong> Septiembre 2017 - Julio 2023</p>
-        <p>
-          <strong>Descripción:</strong> Atención a asegurados, socios y empresas
-          cliente en el departamento de asistencia en carretera.
-        </p>
-      </div>
-      <div class="job">
-        <h3>Barnof Consulting Inmobiliario</h3>
-        <p><strong>Puesto:</strong> Comercial Inmobiliaria</p>
-        <p><strong>Fechas:</strong> Junio 2016 - Enero 2017</p>
-        <p>
-          <strong>Descripción:</strong> Labor comercial de asesoramiento y
-          mediación de operaciones inmobiliarias.
-        </p>
-      </div>
-    </section>
-    <section class="other-info">
-      <h2>Otros Datos de Interés</h2>
-      <p>Certificado de discapacidad superior al 33%</p>
-      <p>Permiso de conducir B</p>
-      <p>Vehículo propio</p>
-    </section>
-    <footer>
-      <p>
-        GitHub:
-        <a href="https://github.com/SyraDominguez">github.com/SyraDominguez</a>
-      </p>
-    </footer>
+    <div class="container">
+      <aside class="sidebar">
+        <div class="photo">
+          <img src="./images/Yo.jpg" alt="Foto de Silvia Ramírez Domínguez" />
+        </div>
+        <div class="contact-info">
+          <h2 class="toggle-lang es">Contacto</h2>
+          <h2 class="toggle-lang en hidden">Contact</h2>
+          <p>
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:syradominguez.dev@gmail.com" target="_blank"
+              >syradominguez.dev@gmail.com</a
+            >
+          </p>
+          <p>
+            <i class="fas fa-phone"></i>
+            640532081
+          </p>
+          <p>
+            <i class="fab fa-linkedin"></i>
+            <a href="https://linkedin.com/in/syradominguez" target="_blank"
+              >linkedin.com/in/syradominguez</a
+            >
+          </p>
+          <p>
+            <i class="fab fa-github"></i>
+            <a href="https://github.com/SyraDominguez" target="_blank"
+              >github.com/SyraDominguez</a
+            >
+          </p>
+        </div>
+        <div class="skills">
+          <h2 class="toggle-lang es">Habilidades Técnicas</h2>
+          <h2 class="toggle-lang en hidden">Technical Skills</h2>
+          <ul>
+            <li>HTML5</li>
+            <li>CSS3 (SASS, Flexbox, Bootstrap)</li>
+            <li>Bootstrap</li>
+            <li>JavaScript</li>
+            <li>Mongo DB, Express, React, Node.js</li>
+            <li>Python</li>
+            <li class="toggle-lang es">chatGPT - optimización de prompts</li>
+            <li class="toggle-lang en hidden">chatGPT - prompt optimization</li>
+            <li>GIT/GitHub</li>
+            <li>VSCode, Terminal/Bash</li>
+          </ul>
+        </div>
+        <div class="languages">
+          <h2 class="toggle-lang es">Idiomas</h2>
+          <h2 class="toggle-lang en hidden">Languages</h2>
+          <p class="toggle-lang es">Inglés: B1</p>
+          <p class="toggle-lang en hidden">English: B1</p>
+          <p class="toggle-lang es">
+            Curso de perfeccionamiento de Inglés a nivel conversacional
+          </p>
+          <p class="toggle-lang en hidden">
+            Advanced English conversation course
+          </p>
+        </div>
+        <div class="other-info">
+          <h2 class="toggle-lang es">Otros Datos de Interés</h2>
+          <h2 class="toggle-lang en hidden">Other Information</h2>
+          <p class="toggle-lang es">
+            Certificado de discapacidad superior al 33%
+          </p>
+          <p class="toggle-lang en hidden">
+            Certificate of disability over 33%
+          </p>
+          <p class="toggle-lang es">Permiso de conducir B</p>
+          <p class="toggle-lang en hidden">Driving license B</p>
+          <p class="toggle-lang es">Vehículo propio</p>
+          <p class="toggle-lang en hidden">Own vehicle</p>
+        </div>
+        <div class="actions">
+          <button onclick="toggleLanguage()">Switch to English</button>
+          <button onclick="downloadPDF()">Download PDF</button>
+        </div>
+      </aside>
+      <main class="main-content" id="cv-content">
+        <header>
+          <h1>Silvia Ramírez Domínguez</h1>
+          <p class="toggle-lang es">
+            Apasionada de la tecnología y del desarrollo personal.
+          </p>
+          <p class="toggle-lang en hidden">
+            Passionate about technology and personal development.
+          </p>
+        </header>
+        <section class="profile">
+          <h2 class="toggle-lang es">Perfil Profesional</h2>
+          <h2 class="toggle-lang en hidden">Professional Profile</h2>
+          <p class="toggle-lang es">
+            Desarrolladora web Fullstack enfocándome hacia desarrollo web e
+            integración de nuevas tecnologías. Actualmente cursando un Bootcamp
+            de Desarrollo Web Fullstack, que me ha permitido conocer tecnologías
+            como HTML, CSS, Python, JavaScript, y el stack MERN (Mongo, Express,
+            React, Node). Habilidad para combinar conocimientos previos en
+            atención al cliente y gestión administrativa con nuevas competencias
+            técnicas para ofrecer soluciones eficientes y efectivas.
+          </p>
+          <p class="toggle-lang en hidden">
+            Fullstack web developer focusing on web development and the
+            integration of new technologies. Currently enrolled in a Fullstack
+            Web Development Bootcamp, which has allowed me to learn technologies
+            such as HTML, CSS, Python, JavaScript, and the MERN stack (Mongo,
+            Express, React, Node). Ability to combine previous knowledge in
+            customer service and administrative management with new technical
+            skills to offer efficient and effective solutions.
+          </p>
+        </section>
+        <section class="experience">
+          <h2 class="toggle-lang es">Experiencia Laboral</h2>
+          <h2 class="toggle-lang en hidden">Work Experience</h2>
+          <div class="job">
+            <h3>Medtronic</h3>
+            <p>
+              <strong class="toggle-lang es">Puesto:</strong
+              ><strong class="toggle-lang en hidden">Position:</strong>
+              Recepcionista - Facility Assistant
+            </p>
+            <p>
+              <strong class="toggle-lang es">Fechas:</strong
+              ><strong class="toggle-lang en hidden">Dates:</strong> Diciembre
+              2023 - Actualmente
+            </p>
+            <p>
+              <strong class="toggle-lang es">Descripción:</strong
+              ><strong class="toggle-lang en hidden">Description:</strong>
+              Funciones de recepcionista en el almacén de la compañía. Apoyo a
+              funciones del departamento de facility: gestión mantenimiento,
+              suministros, control de residuos, compras.
+            </p>
+          </div>
+          <div class="job">
+            <h3>Sergesi</h3>
+            <p>
+              <strong class="toggle-lang es">Puesto:</strong
+              ><strong class="toggle-lang en hidden">Position:</strong> Gestora
+              de Siniestros
+            </p>
+            <p>
+              <strong class="toggle-lang es">Fechas:</strong
+              ><strong class="toggle-lang en hidden">Dates:</strong> Julio 2023
+              - Noviembre 2023
+            </p>
+            <p>
+              <strong class="toggle-lang es">Descripción:</strong
+              ><strong class="toggle-lang en hidden">Description:</strong>
+              Atención a mutualistas en el departamento de Siniestros de
+              Automóvil.
+            </p>
+          </div>
+          <div class="job">
+            <h3>RACC</h3>
+            <p>
+              <strong class="toggle-lang es">Puesto:</strong
+              ><strong class="toggle-lang en hidden">Position:</strong> Gestora
+              Telefónica Administrativa
+            </p>
+            <p>
+              <strong class="toggle-lang es">Fechas:</strong
+              ><strong class="toggle-lang en hidden">Dates:</strong> Septiembre
+              2017 - Julio 2023
+            </p>
+            <p>
+              <strong class="toggle-lang es">Descripción:</strong
+              ><strong class="toggle-lang en hidden">Description:</strong>
+              Atención a asegurados, socios y empresas cliente en el
+              departamento de asistencia en carretera.
+            </p>
+          </div>
+          <div class="job">
+            <h3>Barnof Consulting Inmobiliario</h3>
+            <p>
+              <strong class="toggle-lang es">Puesto:</strong
+              ><strong class="toggle-lang en hidden">Position:</strong>
+              Comercial Inmobiliaria
+            </p>
+            <p>
+              <strong class="toggle-lang es">Fechas:</strong
+              ><strong class="toggle-lang en hidden">Dates:</strong> Junio 2016
+              - Enero 2017
+            </p>
+            <p>
+              <strong class="toggle-lang es">Descripción:</strong
+              ><strong class="toggle-lang en hidden">Description:</strong> Labor
+              comercial de asesoramiento y mediación de operaciones
+              inmobiliarias.
+            </p>
+          </div>
+        </section>
+        <section class="projects">
+          <h2 class="toggle-lang es">Proyectos Personales</h2>
+          <h2 class="toggle-lang en hidden">Personal Projects</h2>
+          <ul>
+            <li>
+              <strong>Wallashop-React:</strong> Desarrollo de una aplicación de
+              e-commerce utilizando React.
+              <a
+                href="https://github.com/SyraDominguez/Wallashop-React"
+                target="_blank"
+                class="toggle-lang es"
+                >Ver repositorio</a
+              >
+              <a
+                href="https://github.com/SyraDominguez/Wallashop-React"
+                target="_blank"
+                class="toggle-lang en hidden"
+                >View repository</a
+              >
+            </li>
+            <li>
+              <strong>Nodepop-Avanzado:</strong> Plataforma de anuncios
+              clasificados construida con Node.js y MongoDB.
+              <a
+                href="https://github.com/SyraDominguez/nodepop-avanzado"
+                target="_blank"
+                class="toggle-lang es"
+                >Ver repositorio</a
+              >
+              <a
+                href="https://github.com/SyraDominguez/nodepop-avanzado"
+                target="_blank"
+                class="toggle-lang en hidden"
+                >View repository</a
+              >
+            </li>
+            <li>
+              <strong>CS3000:</strong> Simulación de un sistema operativo
+              educativo.
+              <a
+                href="https://github.com/SyraDominguez/CS3000"
+                target="_blank"
+                class="toggle-lang es"
+                >Ver repositorio</a
+              >
+              <a
+                href="https://github.com/SyraDominguez/CS3000"
+                target="_blank"
+                class="toggle-lang en hidden"
+                >View repository</a
+              >
+            </li>
+            <li>
+              <strong>Pixelina Portfolio:</strong> Portafolio personal
+              desarrollado con HTML, CSS y JavaScript.
+              <a
+                href="https://github.com/SyraDominguez/pixelinaportfolio"
+                target="_blank"
+                class="toggle-lang es"
+                >Ver repositorio</a
+              >
+              <a
+                href="https://github.com/SyraDominguez/pixelinaportfolio"
+                target="_blank"
+                class="toggle-lang en hidden"
+                >View repository</a
+              >
+              |
+              <a
+                href="https://syradominguez.github.io/pixelinaportfolio/"
+                target="_blank"
+                class="toggle-lang es"
+                >Ver sitio web</a
+              >
+              <a
+                href="https://syradominguez.github.io/pixelinaportfolio/"
+                target="_blank"
+                class="toggle-lang en hidden"
+                >View website</a
+              >
+            </li>
+          </ul>
+        </section>
+        <section class="education">
+          <h2 class="toggle-lang es">Educación y Formación</h2>
+          <h2 class="toggle-lang en hidden">Education and Training</h2>
+          <p class="toggle-lang es">
+            <strong>Bootcamp Desarrollo Web Fullstack</strong> (En curso) -
+            <a
+              href="https://keepcoding.io/nuestros-bootcamps/full-stack-web-bootcamp/"
+              target="_blank"
+              >KeepCoding</a
+            >
+          </p>
+          <p class="toggle-lang en hidden">
+            <strong>Fullstack Web Development Bootcamp</strong> (Ongoing) -
+            <a
+              href="https://keepcoding.io/nuestros-bootcamps/full-stack-web-bootcamp/"
+              target="_blank"
+              >KeepCoding</a
+            >
+          </p>
+          <p class="toggle-lang es">
+            <strong>Bootcamp Aprende a Programar</strong> -
+            <a
+              href="https://keepcoding.io/nuestros-bootcamps/bootcamp-aprende-a-programar/"
+              target="_blank"
+              >KeepCoding</a
+            >
+          </p>
+          <p class="toggle-lang en hidden">
+            <strong>Learn to Program Bootcamp</strong> -
+            <a
+              href="https://keepcoding.io/nuestros-bootcamps/bootcamp-aprende-a-programar/"
+              target="_blank"
+              >KeepCoding</a
+            >
+          </p>
+        </section>
+      </main>
+    </div>
+    <script src="./script.js"></script>
   </body>
 </html>
