@@ -21,6 +21,14 @@ body {
   color: #fff;
   padding: 20px;
   width: 400px;
+  /* Ajusta este valor según sea necesario */
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    /* Ocupa toda la pantalla en la versión móvil */
+  }
 }
 
 .sidebar .photo img {
