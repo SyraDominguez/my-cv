@@ -26,6 +26,25 @@
         <div class="photo">
           <img src="./images/Yo.jpg" alt="Foto de Silvia Ramírez Domínguez" />
         </div>
+        <div class="header-buttons">
+          <button
+            id="lang-button"
+            onclick="toggleLanguage()"
+            title="Change Language"
+          >
+            <i class="fas fa-language"></i>
+          </button>
+          <button
+            id="theme-button"
+            onclick="toggleTheme()"
+            title="Change Theme"
+          >
+            <i class="fas fa-sun"></i>
+          </button>
+          <button onclick="downloadPDF()" title="Download PDF">
+            <i class="fas fa-file-pdf"></i>
+          </button>
+        </div>
         <div class="contact-info">
           <h2 class="toggle-lang es">Contacto</h2>
           <h2 class="toggle-lang en hidden">Contact</h2>
@@ -104,15 +123,6 @@
           <p class="toggle-lang en hidden">
             Passionate about technology and personal development.
           </p>
-          <div class="header-buttons actions">
-            <button id="lang-button" onclick="toggleLanguage()">
-              Change Language
-            </button>
-            <button id="theme-button" onclick="toggleTheme()">
-              Change Theme
-            </button>
-            <button onclick="downloadPDF()">Download PDF</button>
-          </div>
         </header>
         <section class="profile section">
           <h2 class="toggle-lang es">Perfil Profesional</h2>

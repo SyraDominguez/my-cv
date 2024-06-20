@@ -55,27 +55,36 @@ body {
   margin-right: 10px;
 }
 
-.actions {
-  margin-top: 20px;
+.header-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  /* Espacio entre los botones */
+  margin-top: 10px;
 }
 
-.actions button {
-  display: block;
-  width: 100%;
+.header-buttons button {
   background: #0056b3;
   color: #fff;
   border: none;
   padding: 10px;
-  margin-bottom: 10px;
   cursor: pointer;
   transition: transform 0.2s;
+  border-radius: 5px;
+  /* Esquinas redondeadas */
+  font-size: 16px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.actions button:hover {
+.header-buttons button:hover {
   background: #004494;
 }
 
-.actions button:active {
+.header-buttons button:active {
   transform: scale(0.95);
 }
 
@@ -102,34 +111,6 @@ header {
 
 header h1 {
   margin: 0;
-}
-
-.header-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  /* Espacio entre los botones */
-  margin-top: 10px;
-}
-
-.header-buttons button {
-  background: #0056b3;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  /* Ajusta el relleno para un mejor tamaño del botón */
-  cursor: pointer;
-  transition: transform 0.2s;
-  border-radius: 5px;
-  /* Esquinas redondeadas */
-}
-
-.header-buttons button:hover {
-  background: #004494;
-}
-
-.header-buttons button:active {
-  transform: scale(0.95);
 }
 
 section {

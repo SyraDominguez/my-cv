@@ -1,15 +1,8 @@
 function toggleLanguage() {
-  var elementsEs = document.querySelectorAll('.toggle-lang.es');
-  var elementsEn = document.querySelectorAll('.toggle-lang.en');
-
-  elementsEs.forEach(function (element) {
-    element.classList.toggle('hidden');
+  var elements = document.querySelectorAll(".toggle-lang");
+  elements.forEach(function (element) {
+    element.classList.toggle("hidden");
   });
-
-  elementsEn.forEach(function (element) {
-    element.classList.toggle('hidden');
-  });
-
   updateLanguageButton();
 }
 
@@ -34,9 +27,9 @@ function updateLanguageButton() {
   var langButton = document.getElementById('lang-button');
 
   if (isEnglish) {
-    langButton.textContent = 'Switch to Spanish';
+    langButton.innerHTML = '<i class="fas fa-language"></i>';
   } else {
-    langButton.textContent = 'Cambiar a Inglés';
+    langButton.innerHTML = '<i class="fas fa-language"></i>';
   }
 }
 
@@ -45,15 +38,9 @@ function updateThemeButton() {
   var themeButton = document.getElementById('theme-button');
 
   if (isDarkTheme) {
-    themeButton.textContent = 'Tema Claro';
+    themeButton.innerHTML = '<i class="fas fa-sun"></i>';
   } else {
-    themeButton.textContent = 'Tema Oscuro';
-  }
-
-  if (document.querySelector('.toggle-lang.en').classList.contains('hidden')) {
-    themeButton.textContent = isDarkTheme ? 'Tema Claro' : 'Tema Oscuro';
-  } else {
-    themeButton.textContent = isDarkTheme ? 'Light Mode' : 'Dark Mode';
+    themeButton.innerHTML = '<i class="fas fa-moon"></i>';
   }
 }
 
