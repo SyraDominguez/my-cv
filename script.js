@@ -11,9 +11,9 @@ function updateLanguageButton() {
   var langButton = document.getElementById('lang-button');
 
   if (isEnglish) {
-    langButton.innerHTML = '<i class="fas fa-language"></i>';
+    langButton.innerHTML = '<img src="./images/Google_Translate_Icon.png" alt="Google Translate Icon">';
   } else {
-    langButton.innerHTML = '<i class="fas fa-language"></i>';
+    langButton.innerHTML = '<img src="./images/Google_Translate_Icon.png" alt="Google Translate Icon">';
   }
 }
 

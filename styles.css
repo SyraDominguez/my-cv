@@ -51,6 +51,11 @@ body {
   text-decoration: underline;
 }
 
+#lang-button img {
+  width: 20px;
+  height: 20px;
+}
+
 .contact-info i {
   margin-right: 10px;
 }
