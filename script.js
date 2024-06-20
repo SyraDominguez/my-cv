@@ -6,9 +6,32 @@ function toggleLanguage() {
   updateLanguageButton();
 }
 
+function updateLanguageButton() {
+  var isEnglish = !document.querySelector('.toggle-lang.en').classList.contains('hidden');
+  var langButton = document.getElementById('lang-button');
+
+  if (isEnglish) {
+    langButton.innerHTML = '<i class="fas fa-language"></i>';
+  } else {
+    langButton.innerHTML = '<i class="fas fa-language"></i>';
+  }
+}
+
+
 function toggleTheme() {
   document.body.classList.toggle('dark-theme');
   updateThemeButton();
+}
+
+function updateThemeButton() {
+  var isDarkTheme = document.body.classList.contains('dark-theme');
+  var themeButton = document.getElementById('theme-button');
+
+  if (isDarkTheme) {
+    themeButton.innerHTML = '<i class="fas fa-sun"></i>';
+  } else {
+    themeButton.innerHTML = '<i class="fas fa-moon"></i>';
+  }
 }
 
 function downloadPDF() {
@@ -16,6 +39,7 @@ function downloadPDF() {
 
   // Guardar el tema actual
   var isDarkTheme = document.body.classList.contains('dark-theme');
+  var isEnglish = !document.querySelector('.toggle-lang.en').classList.contains('hidden');
 
   // Clonar el contenido del aside y reestructurarlo
   var contactInfoAside = document.getElementById("contact-info-aside").cloneNode(true);
@@ -26,14 +50,15 @@ function downloadPDF() {
 
   // Seleccionar habilidades técnicas más interesantes
   var skills = contactInfoAside.querySelectorAll('.skills li');
-  var topSkills = Array.from(skills).slice(0, 6); // Selecciona las primeras 5 habilidades
+  var topSkills = Array.from(skills).slice(0, 6); // Selecciona las primeras 6 habilidades
 
   // Crear HTML para habilidades seleccionadas
-  var skillsHTML = '<h3>Habilidades Técnicas</h3><ul>';
-  topSkills.forEach(function (skill) {
-    skillsHTML += `<li>${skill.innerHTML}</li>`;
-  });
-  skillsHTML += '</ul>';
+  var skillsHTML = `
+    <h2 style="text-align: center;">${isEnglish ? 'Technical Skills' : 'Habilidades Técnicas'}</h2>
+    <ul style="columns: 2;">
+      ${topSkills.map(skill => `<li>${skill.innerHTML}</li>`).join('')}
+    </ul>
+  `;
 
   // Añadir el contenido del aside a la tarjeta de contacto en columnas
   contactCard.innerHTML = `
@@ -41,26 +66,33 @@ function downloadPDF() {
       <div class="contact-photo">
         ${contactInfoAside.querySelector('.photo').innerHTML}
       </div>
-      <div class="contact-personal">
+      <div class="contact-personal" style="margin-right: 10px;">
         <h2>Silvia Ramírez Domínguez</h2>
         <p><i class="fas fa-envelope"></i> syradominguez.dev@gmail.com</p>
         <p><i class="fas fa-phone"></i> 640532081</p>
         <p><i class="fab fa-linkedin"></i> linkedin.com/in/syradominguez</p>
         <br />
         <div class="contact-other">
-          <h3>Otros Datos de Interés</h3>
-          <p>Certificado de discapacidad superior al 33%</p>
-          <p>Permiso de conducir B</p>
-          <p>Vehículo propio</p>
+          <h3>${isEnglish ? 'Other Information' : 'Otros Datos de Interés'}</h3>
+          <p>${isEnglish ? 'Certificate of disability over 33%' : 'Certificado de discapacidad superior al 33%'}</p>
+          <p>${isEnglish ? 'Driving license B' : 'Permiso de conducir B'}</p>
+          <p>${isEnglish ? 'Own vehicle' : 'Vehículo propio'}</p>
         </div>
       </div>
       <div class="contact-details">
         ${skillsHTML}
-        <h3>Idiomas</h3>
-        <p>Inglés: B1</p>
+        <h3>${isEnglish ? 'Languages' : 'Idiomas'}</h3>
+        <p>${isEnglish ? 'English: B1' : 'Inglés: B1'}</p>
       </div>
     </div>
   `;
+
+  // Aplicar estilo reducido a la tarjeta de contacto y añadir margen superior
+  contactCard.style.fontSize = '11px'; // Aumenta un poco el tamaño de la letra
+  contactCard.style.marginTop = '50px'; // Ajusta este valor según sea necesario
+  contactCard.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
+  contactCard.style.borderRadius = '8px';
+  contactCard.style.padding = '10px';
 
   // Crear un contenedor para el contenido adicional
   var additionalContent = document.createElement('div');
@@ -91,27 +123,9 @@ function downloadPDF() {
 
 
 
-function updateLanguageButton() {
-  var isEnglish = !document.querySelector('.toggle-lang.en').classList.contains('hidden');
-  var langButton = document.getElementById('lang-button');
 
-  if (isEnglish) {
-    langButton.innerHTML = '<i class="fas fa-language"></i>';
-  } else {
-    langButton.innerHTML = '<i class="fas fa-language"></i>';
-  }
-}
 
-function updateThemeButton() {
-  var isDarkTheme = document.body.classList.contains('dark-theme');
-  var themeButton = document.getElementById('theme-button');
 
-  if (isDarkTheme) {
-    themeButton.innerHTML = '<i class="fas fa-sun"></i>';
-  } else {
-    themeButton.innerHTML = '<i class="fas fa-moon"></i>';
-  }
-}
 
 // Función para mostrar secciones con animación
 function showSections() {

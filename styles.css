@@ -159,38 +159,41 @@ footer {
 .contact-card {
   border: 1px solid #ccc;
   padding: 10px;
-  /* Espacio reducido */
   margin-top: 10px;
-  /* Espacio reducido */
   background-color: #fff;
   color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
 .contact-card-row {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  gap: 25px;
+  /* Más espacio entre las columnas */
 }
 
 .contact-photo {
-  text-align: left;
+  text-align: center;
+  flex: 1;
 }
 
 .contact-photo img {
-  width: 70px;
-  /* tamaño reducido */
-  height: 70px;
-  /* tamaño reducido */
+  width: 95px;
+  /* tamaño ajustado */
+  height: 95px;
+  /* tamaño ajustado */
   border-radius: 50%;
   display: block;
-  margin-bottom: 5px;
-  /* Espacio reducido */
+  margin-top: 8px;
+  margin-left: 15px;
 }
 
 .contact-personal {
-  flex: 1;
-  margin-left: 10px;
-  /* Espacio reducido */
+  flex: 1.5;
+  /* Aumenta la proporción */
 }
 
 .contact-personal h2 {
@@ -198,39 +201,42 @@ footer {
   display: inline-block;
   vertical-align: middle;
   margin-left: 5px;
-  /* Espacio reducido */
 }
 
 .contact-personal p {
   margin: 3px 0;
-  /* Espacio reducido */
+  padding-left: 10px;
+  /* Añadir sangría a la derecha */
 }
 
 .contact-other {
   margin-top: 5px;
-  /* Espacio reducido */
   font-size: 0.9em;
 }
 
+.contact-other p {
+  padding-left: 10px;
+  /* Añadir sangría a la derecha */
+}
+
 .contact-details {
-  flex: 1;
-  margin-left: 10px;
-  /* Espacio reducido */
+  flex: 2.5;
+  /* Aumenta la proporción */
 }
 
 .contact-card h3 {
+  display: inline-block;
   margin-top: 10px;
-  /* Espacio reducido */
   border-bottom: 1px solid #ccc;
   padding-bottom: 5px;
 }
 
 .contact-card ul {
-  list-style-type: none;
-  padding: 0;
+  list-style-type: disc;
+  padding-left: 20px;
+  columns: 2;
 }
 
 .contact-card li {
   margin: 3px 0;
-  /* Espacio reducido */
 }
