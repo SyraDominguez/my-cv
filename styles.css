@@ -68,15 +68,29 @@ body {
   padding: 10px;
   margin-bottom: 10px;
   cursor: pointer;
+  transition: transform 0.2s;
 }
 
 .actions button:hover {
   background: #004494;
 }
 
+.actions button:active {
+  transform: scale(0.95);
+}
+
 .main-content {
   flex: 1;
   padding: 20px;
+}
+
+.section {
+  opacity: 0;
+  transition: opacity 0.6s ease-out;
+}
+
+.section.visible {
+  opacity: 1;
 }
 
 header {
@@ -88,6 +102,33 @@ header {
 
 header h1 {
   margin: 0;
+}
+
+.header-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  /* Espacio entre los botones */
+}
+
+.header-buttons button {
+  background: #0056b3;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  /* Ajusta el relleno para un mejor tamaño del botón */
+  cursor: pointer;
+  transition: transform 0.2s;
+  border-radius: 10px;
+  /* Esquinas redondeadas */
+}
+
+.header-buttons button:hover {
+  background: #004494;
+}
+
+.header-buttons button:active {
+  transform: scale(0.95);
 }
 
 section {
@@ -118,4 +159,17 @@ footer {
   padding: 10px;
   background: #007bff;
   color: #fff;
+}
+
+.dark-theme {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-theme a {
+  color: #1e90ff;
+}
+
+.dark-theme .sidebar {
+  background: #444;
 }
