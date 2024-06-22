@@ -31,6 +31,23 @@
             onclick="toggleAside()"
           />
         </div>
+        <div class="collapsed-icons">
+          <i
+            class="fas fa-address-book"
+            data-section="contact-info"
+            onclick="showSection('contact-info')"
+          ></i>
+          <i
+            class="fas fa-tools"
+            data-section="skills-languages"
+            onclick="showSection('skills-languages')"
+          ></i>
+          <i
+            class="fas fa-info-circle"
+            data-section="other-info"
+            onclick="showSection('other-info')"
+          ></i>
+        </div>
         <div class="header-buttons collapsed-buttons">
           <button
             id="lang-button"
@@ -113,7 +130,61 @@
           <p class="toggle-lang es">Vehículo propio</p>
           <p class="toggle-lang en hidden">Own vehicle</p>
         </div>
+        <div class="section-card hidden" id="contact-info-card">
+          <h2>Contacto</h2>
+          <p>Email: syradominguez.dev@gmail.com</p>
+          <p>Teléfono: 640532081</p>
+          <p>LinkedIn: linkedin.com/in/syradominguez</p>
+          <p>GitHub: github.com/SyraDominguez</p>
+        </div>
+        <div class="section-card hidden" id="skills-languages-card">
+          <h2>Habilidades Técnicas e Idiomas</h2>
+          <ul>
+            <li>HTML5</li>
+            <li>CSS3 (SASS, Flexbox, Bootstrap)</li>
+            <li>JavaScript</li>
+            <li>Mongo DB, Express, React, Node.js</li>
+            <li>Python</li>
+            <li>GIT/GitHub</li>
+            <li>VSCode, Terminal/Bash</li>
+          </ul>
+          <p>Inglés: B1</p>
+        </div>
+        <div class="section-card hidden" id="other-info-card">
+          <h2>Otros Datos de Interés</h2>
+          <p>Certificado de discapacidad</p>
+          <p>Permiso de conducir B</p>
+          <p>Vehículo propio</p>
+        </div>
       </aside>
+
+      <!-- Tarjetas de secciones -->
+      <div class="section-card hidden" id="contact-info-card">
+        <h2>Contacto</h2>
+        <p>Email: syradominguez.dev@gmail.com</p>
+        <p>Teléfono: 640532081</p>
+        <p>LinkedIn: linkedin.com/in/syradominguez</p>
+        <p>GitHub: github.com/SyraDominguez</p>
+      </div>
+      <div class="section-card hidden" id="skills-languages-card">
+        <h2>Habilidades Técnicas e Idiomas</h2>
+        <ul>
+          <li>HTML5</li>
+          <li>CSS3 (SASS, Flexbox, Bootstrap)</li>
+          <li>JavaScript</li>
+          <li>Mongo DB, Express, React, Node.js</li>
+          <li>Python</li>
+          <li>GIT/GitHub</li>
+          <li>VSCode, Terminal/Bash</li>
+        </ul>
+        <p>Inglés: B1</p>
+      </div>
+      <div class="section-card hidden" id="other-info-card">
+        <h2>Otros Datos de Interés</h2>
+        <p>Certificado de discapacidad</p>
+        <p>Permiso de conducir B</p>
+        <p>Vehículo propio</p>
+      </div>
       <main class="main-content" id="cv-content">
         <header class="section">
           <h1>Silvia Ramírez Domínguez</h1>
@@ -426,5 +497,6 @@
       </main>
     </div>
     <script src="./script.js"></script>
+    <script src="./asideActions.js"></script>
   </body>
 </html>
