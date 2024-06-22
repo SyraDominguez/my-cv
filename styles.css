@@ -112,6 +112,10 @@ body.dark-theme {
   display: none;
 }
 
+.collapsed-icons.hidden {
+  display: none;
+}
+
 .header-buttons.collapsed-buttons {
   flex-direction: row;
 }
@@ -347,13 +351,31 @@ footer {
   transform: translateX(0);
 }
 
+/* Estilos para la capa superpuesta */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /* Fondo oscuro translúcido */
+  z-index: 998;
+  /* Asegurar que esté sobre el contenido pero debajo de las tarjetas */
+  display: none;
+  /* Ocultar por defecto */
+}
+
 /* Estilos para las tarjetas */
 .section-card {
   position: absolute;
   left: 0;
   width: 300px;
-  background: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.9);
+  /* Fondo blanco translúcido */
+  color: black;
+  border: 2px solid black;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   padding: 20px;
   transition: transform 0.3s ease-out, opacity 0.3s ease-out;
@@ -374,7 +396,8 @@ footer {
 }
 
 .dark-theme .section-card {
-  background: #007bff;
+  background: rgba(0, 123, 255);
+  /* Fondo azul translúcido */
   color: white;
 }
 
@@ -386,11 +409,13 @@ footer {
   left: -15px;
   border-width: 10px;
   border-style: solid;
-  border-color: transparent white transparent transparent;
+  border-color: transparent rgba(255, 255, 255, 0.9) transparent transparent;
+  /* Bocadillo translúcido */
 }
 
 .dark-theme .section-card::before {
-  border-color: transparent #007bff transparent transparent;
+  border-color: transparent rgba(0, 123, 255, 0.9) transparent transparent;
+  /* Bocadillo translúcido */
 }
 
 /* Iconos en columna */
@@ -398,7 +423,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .collapsed-icons i {

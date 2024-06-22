@@ -11,26 +11,27 @@ function showSection(sectionId) {
   var sectionCard = document.getElementById(sectionId + '-card');
   var icon = document.querySelector(`[data-section="${sectionId}"]`);
   var iconRect = icon.getBoundingClientRect();
-
-  // Ocultar todas las tarjetas antes de mostrar la nueva
-  hideAllCards();
+  var overlay = document.getElementById('overlay');
 
   // Ajustar posición
   sectionCard.style.top = (iconRect.top + window.scrollY) + 'px';
   sectionCard.style.left = (iconRect.right + 10) + 'px';
 
-  // Mostrar la tarjeta
+  // Mostrar la tarjeta y la capa superpuesta
   sectionCard.classList.remove('hidden');
   sectionCard.classList.add('visible');
+  overlay.style.display = 'block';
 }
 
 // Ocultar todas las tarjetas
 function hideAllCards() {
   var allCards = document.querySelectorAll('.section-card');
+  var overlay = document.getElementById('overlay');
   allCards.forEach(function (card) {
     card.classList.add('hidden');
     card.classList.remove('visible');
   });
+  overlay.style.display = 'none'; // Ocultar la capa superpuesta
 }
 
 // Ocultar tarjetas al hacer clic fuera de ellas
