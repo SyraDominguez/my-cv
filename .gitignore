@@ -1,8 +1,8 @@
-*.png
-*.jpg
-*.js
-./images/
+# *.png
+# *.jpg
+# *.js
+# ./images/
 /components/
-/js/
+# /js/
 /script.js
-./images/Yo.jpg
+# ./images/Yo.jpg
