@@ -173,7 +173,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 });
-
 // Función para alternar el aside
 function toggleAside() {
   var aside = document.getElementById('contact-info-aside');
@@ -189,13 +188,13 @@ function toggleAside() {
     logo.style.height = '80px';
     headerButtons.classList.remove('hidden');
     asideButtons.classList.add('hidden');
-    collapsedIcons.classList.remove('hidden');
+    collapsedIcons.style.display = 'flex'; // Mostrar iconos de tarjetas
   } else {
     logo.style.width = '150px';
     logo.style.height = '150px';
     headerButtons.classList.add('hidden');
     asideButtons.classList.remove('hidden');
-    collapsedIcons.classList.add('hidden');
+    collapsedIcons.style.display = 'none'; // Ocultar iconos de tarjetas
     hideAllCards(); // Ocultar todas las tarjetas al desplegar el aside
   }
 

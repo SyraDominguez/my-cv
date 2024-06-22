@@ -409,6 +409,11 @@ footer {
   position: relative;
 }
 
+.sidebar.collapsed .collapsed-icons {
+  display: flex;
+  /* Mostrar iconos de tarjetas cuando el aside está colapsado */
+}
+
 @media (max-width: 780px) {
   .sidebar {
     width: 300px;
