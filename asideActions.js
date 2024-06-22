@@ -5,7 +5,6 @@ document.querySelectorAll('.collapsed-icons i').forEach(function (icon) {
     showSection(icon.dataset.section);
   });
 });
-
 // Función para mostrar una tarjeta específica
 function showSection(sectionId) {
   var sectionCard = document.getElementById(sectionId + '-card');
@@ -60,7 +59,8 @@ document.querySelectorAll('.section-card').forEach(function (card) {
 function toggleAside() {
   var aside = document.getElementById('contact-info-aside');
   var logo = document.getElementById('toggle-aside-button');
-  var headerButtons = document.querySelector('.header-buttons');
+  var headerButtons = document.querySelector('header .header-buttons');
+  var asideButtons = aside.querySelector('.header-buttons');
   var collapsedIcons = document.querySelector('.collapsed-icons');
 
   aside.classList.toggle('collapsed');
@@ -69,14 +69,15 @@ function toggleAside() {
     logo.style.width = '80px';
     logo.style.height = '80px';
     headerButtons.classList.remove('hidden');
-    headerButtons.classList.add('collapsed-buttons');
+    asideButtons.classList.add('hidden');
     collapsedIcons.classList.remove('hidden');
   } else {
     logo.style.width = '150px';
     logo.style.height = '150px';
     headerButtons.classList.add('hidden');
-    headerButtons.classList.remove('collapsed-buttons');
+    asideButtons.classList.remove('hidden');
     collapsedIcons.classList.add('hidden');
     hideAllCards(); // Ocultar todas las tarjetas al desplegar el aside
   }
 }
+

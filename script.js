@@ -159,12 +159,18 @@ document.addEventListener('DOMContentLoaded', function () {
   var headerButtons = document.querySelector('header .header-buttons');
   var asideButtons = aside.querySelector('.header-buttons');
 
-  if (aside.classList.contains('collapsed')) {
-    headerButtons.classList.remove('hidden');
-    asideButtons.classList.add('hidden');
-  } else {
+  if (window.innerWidth <= 780) {
+    aside.classList.remove('collapsed');
     headerButtons.classList.add('hidden');
     asideButtons.classList.remove('hidden');
+  } else {
+    if (aside.classList.contains('collapsed')) {
+      headerButtons.classList.remove('hidden');
+      asideButtons.classList.add('hidden');
+    } else {
+      headerButtons.classList.add('hidden');
+      asideButtons.classList.remove('hidden');
+    }
   }
 });
 
@@ -174,6 +180,7 @@ function toggleAside() {
   var logo = document.getElementById('toggle-aside-button');
   var headerButtons = document.querySelector('header .header-buttons');
   var asideButtons = aside.querySelector('.header-buttons');
+  var collapsedIcons = document.querySelector('.collapsed-icons');
 
   aside.classList.toggle('collapsed');
 
@@ -182,13 +189,70 @@ function toggleAside() {
     logo.style.height = '80px';
     headerButtons.classList.remove('hidden');
     asideButtons.classList.add('hidden');
+    collapsedIcons.classList.remove('hidden');
   } else {
     logo.style.width = '150px';
     logo.style.height = '150px';
     headerButtons.classList.add('hidden');
     asideButtons.classList.remove('hidden');
+    collapsedIcons.classList.add('hidden');
+    hideAllCards(); // Ocultar todas las tarjetas al desplegar el aside
+  }
+
+  // Verifica si es una pantalla pequeña y fuerza el estado desplegado
+  if (window.innerWidth <= 780) {
+    aside.classList.remove('collapsed');
+    headerButtons.classList.add('hidden');
+    asideButtons.classList.remove('hidden');
+    collapsedIcons.style.display = 'none';
   }
 }
 
+// Ajustar el estado del aside al redimensionar la ventana
+window.addEventListener('resize', function () {
+  var aside = document.getElementById('contact-info-aside');
+  var headerButtons = document.querySelector('header .header-buttons');
+  var asideButtons = aside.querySelector('.header-buttons');
+  var collapsedIcons = document.querySelector('.collapsed-icons');
+
+  if (window.innerWidth <= 780) {
+    aside.classList.remove('collapsed');
+    headerButtons.classList.add('hidden');
+    asideButtons.classList.remove('hidden');
+    collapsedIcons.style.display = 'none';
+  } else {
+    if (aside.classList.contains('collapsed')) {
+      headerButtons.classList.remove('hidden');
+      asideButtons.classList.add('hidden');
+      collapsedIcons.style.display = 'flex';
+    } else {
+      headerButtons.classList.add('hidden');
+      asideButtons.classList.remove('hidden');
+      collapsedIcons.style.display = 'none';
+    }
+  }
+});
+
 // Mostrar secciones al hacer scroll
 document.addEventListener('scroll', showSections);
+
+// Ajustar el estado del aside al redimensionar la ventana
+window.addEventListener('resize', function () {
+  var aside = document.getElementById('contact-info-aside');
+  var headerButtons = document.querySelector('header .header-buttons');
+  var asideButtons = aside.querySelector('.header-buttons');
+
+  if (window.innerWidth <= 780) {
+    aside.classList.remove('collapsed');
+    headerButtons.classList.add('hidden');
+    asideButtons.classList.remove('hidden');
+  } else {
+    if (aside.classList.contains('collapsed')) {
+      headerButtons.classList.remove('hidden');
+      asideButtons.classList.add('hidden');
+    } else {
+      headerButtons.classList.add('hidden');
+      asideButtons.classList.remove('hidden');
+    }
+  }
+});
