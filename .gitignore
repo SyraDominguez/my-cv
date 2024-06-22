@@ -1,6 +1,7 @@
 *.png
 *.jpg
+*.js
 ./images/
 /components/
 /js/
-./script.js
+/script.js
