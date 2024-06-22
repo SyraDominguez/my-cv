@@ -21,7 +21,33 @@ body {
   color: #fff;
   padding: 20px;
   width: 400px;
-  /* Ajusta este valor según sea necesario */
+  transition: width 0.3s, transform 0.3s;
+}
+
+.sidebar.collapsed {
+  width: 80px;
+  overflow: hidden;
+}
+
+.sidebar.collapsed .header-buttons {
+  flex-direction: column;
+}
+
+.sidebar.collapsed .photo img {
+  width: 60px;
+  height: 60px;
+}
+
+.sidebar.collapsed .contact-info,
+.sidebar.collapsed .skills,
+.sidebar.collapsed .languages,
+.sidebar.collapsed .other-info {
+  display: none;
+}
+
+.sidebar.collapsed #toggle-aside-button {
+  width: 60px;
+  height: 60px;
 }
 
 @media (max-width: 768px) {
@@ -204,18 +230,26 @@ footer {
   margin-left: 15px;
   border: 2px solid black;
   /* Añadir borde negro en modo oscuro */
-  box-shadow: 0 100px 100px rgba(0, 0, 0, 0.3);
-  /* Efecto de sombra para simular relieve */
-  /* box-shadow: inset 0 8px 15px rgba(0, 0, 0, 0.3); */
-
-}
-
-.dark-theme .photo img {
-  border: 2px solid black;
-  /* Añadir borde negro en modo oscuro */
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
   /* Efecto de sombra para simular relieve */
   /* box-shadow: inset 0 20px 30px rgba(0, 0, 0, 0.3); */
+
+}
+
+.light-theme,
+.dark-theme .photo img {
+  border: 2px solid black;
+  /* Añadir borde negro en modo oscuro */
+  box-shadow: inset 0 20px 30px rgba(0, 0, 0, 0.3);
+  /* Efecto de sombra para simular relieve interior */
+}
+
+.light-theme,
+.dark-theme .photo img {
+  border: 2px solid black;
+  /* Añadir borde negro en modo oscuro */
+  box-shadow: inset 0 20px 30px rgba(0, 0, 0, 0.3);
+  /* Efecto de sombra para simular relieve interior */
 }
 
 .contact-personal {
@@ -266,4 +300,24 @@ footer {
 
 .contact-card li {
   margin: 3px 0;
+}
+
+/* Estilos para el botón de alternancia */
+#toggle-aside-button {
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.collapsed .contact-info,
+.collapsed .skills,
+.collapsed .languages,
+.collapsed .other-info,
+.collapsed .header-buttons button:not(#toggle-aside-button) {
+  display: none;
+}
+
+.collapsed .photo img {
+  margin-top: 25px;
+  width: 60px;
+  height: 60px;
 }

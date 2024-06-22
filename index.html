@@ -17,30 +17,35 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
-    <link
-      rel="icon"
-      type="image/png"
-      href="./components/images/Logo Silvia.webp"
-    />
+    <link rel="icon" type="image/png" href="./images/Logo Silvia.webp" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
   </head>
   <body>
     <div class="container">
       <aside class="sidebar" id="contact-info-aside">
+        <!-- <button id="toggle-aside-button" onclick="toggleAside()">☰</button> -->
         <div class="photo">
           <img
-            src="./components/images/Logo2.png"
-            alt="Foto de Silvia Ramírez Domínguez"
+            id="toggle-aside-button"
+            src="./images/Logo2.png"
+            alt="Logo Syra Domínguez"
+            onclick="toggleAside()"
           />
         </div>
-        <div class="header-buttons">
+        <!-- <div class="photo">
+          <img
+            src="./images/Logo2.png"
+            alt="Foto de Silvia Ramírez Domínguez"
+          />
+        </div> -->
+        <!-- <div class="header-buttons">
           <button
             id="lang-button"
             onclick="toggleLanguage()"
             title="Change Language"
           >
             <img
-              src="./components/images/Google_Translate_Icon.png"
+              src="./images/Google_Translate_Icon.png"
               alt="Google Translate Icon"
             />
           </button>
@@ -54,7 +59,7 @@
           <button onclick="downloadPDF()" title="Download PDF">
             <i class="fas fa-file-pdf"></i>
           </button>
-        </div>
+        </div> -->
         <div class="contact-info">
           <h2 class="toggle-lang es">Contacto</h2>
           <h2 class="toggle-lang en hidden">Contact</h2>
@@ -118,6 +123,28 @@
       </aside>
       <main class="main-content" id="cv-content">
         <header class="section">
+          <div class="header-buttons">
+            <button
+              id="lang-button"
+              onclick="toggleLanguage()"
+              title="Change Language"
+            >
+              <img
+                src="./images/Google_Translate_Icon.png"
+                alt="Google Translate Icon"
+              />
+            </button>
+            <button
+              id="theme-button"
+              onclick="toggleTheme()"
+              title="Change Theme"
+            >
+              <i class="fas fa-sun"></i>
+            </button>
+            <button onclick="downloadPDF()" title="Download PDF">
+              <i class="fas fa-file-pdf"></i>
+            </button>
+          </div>
           <h1>Silvia Ramírez Domínguez</h1>
           <p class="toggle-lang es">
             Apasionada de la tecnología y del desarrollo personal.
@@ -133,7 +160,8 @@
             Desarrolladora Fullstack enfocada hacia el desarrollo web e
             integración de nuevas tecnologías. Actualmente cursando un Bootcamp
             de Desarrollo Web Fullstack, que me ha permitido conocer tecnologías
-            como <strong>HTML</strong>, <strong>CSS</strong>,
+            como
+            <strong>HTML</strong>, <strong>CSS</strong>,
             <strong>Python</strong>, <strong>JavaScript</strong>, y el stack
             MERN (<strong>MongoDB, Express, React, Node</strong>). Tengo una
             sólida trayectoria en atención al cliente, lo que me ha permitido
@@ -146,7 +174,8 @@
             Fullstack developer focused on web development and integration of
             new technologies. Currently taking a Bootcamp of Fullstack Web
             Development, which has allowed me to learn about technologies such
-            as <strong>HTML</strong>, <strong>CSS</strong>,
+            as
+            <strong>HTML</strong>, <strong>CSS</strong>,
             <strong>Python</strong>, <strong>JavaScript</strong>, and the MERN
             stack (<strong>MongoDB, Express, React, Node</strong>). I have a
             solid track record in customer service, which has allowed me to
@@ -162,20 +191,22 @@
           <div class="job">
             <h3>Medtronic</h3>
             <p>
-              <span class="toggle-lang es">
-                <strong>Puesto:</strong> Recepcionista - Facility Assistant
-              </span>
-              <span class="toggle-lang en hidden">
-                <strong>Position:</strong> Receptionist - Facility Assistant
-              </span>
+              <span class="toggle-lang es"
+                ><strong>Puesto:</strong> Recepcionista - Facility
+                Assistant</span
+              >
+              <span class="toggle-lang en hidden"
+                ><strong>Position:</strong> Receptionist - Facility
+                Assistant</span
+              >
             </p>
             <p>
-              <span class="toggle-lang es">
-                <strong>Fechas:</strong> Diciembre 2023 - Actualmente
-              </span>
-              <span class="toggle-lang en hidden">
-                <strong>Dates:</strong> December 2023 - Present
-              </span>
+              <span class="toggle-lang es"
+                ><strong>Fechas:</strong> Diciembre 2023 - Actualmente</span
+              >
+              <span class="toggle-lang en hidden"
+                ><strong>Dates:</strong> December 2023 - Present</span
+              >
             </p>
             <p>
               <span class="toggle-lang es">
@@ -194,20 +225,20 @@
           <div class="job">
             <h3>Sergesi (grupo Mutua Madrileña)</h3>
             <p>
-              <span class="toggle-lang es">
-                <strong>Puesto:</strong> Gestora de Siniestros
-              </span>
-              <span class="toggle-lang en hidden">
-                <strong>Position:</strong> Claims Manager
-              </span>
+              <span class="toggle-lang es"
+                ><strong>Puesto:</strong> Gestora de Siniestros</span
+              >
+              <span class="toggle-lang en hidden"
+                ><strong>Position:</strong> Claims Manager</span
+              >
             </p>
             <p>
-              <span class="toggle-lang es">
-                <strong>Fechas:</strong> Julio 2023 - Noviembre 2023
-              </span>
-              <span class="toggle-lang en hidden">
-                <strong>Dates:</strong> July 2023 - November 2023
-              </span>
+              <span class="toggle-lang es"
+                ><strong>Fechas:</strong> Julio 2023 - Noviembre 2023</span
+              >
+              <span class="toggle-lang en hidden"
+                ><strong>Dates:</strong> July 2023 - November 2023</span
+              >
             </p>
             <p>
               <span class="toggle-lang es">
@@ -223,20 +254,22 @@
           <div class="job">
             <h3>RACC</h3>
             <p>
-              <span class="toggle-lang es">
-                <strong>Puesto:</strong> Gestora Telefónica Administrativa
-              </span>
-              <span class="toggle-lang en hidden">
-                <strong>Position:</strong> Administrative Telephone Manager
-              </span>
+              <span class="toggle-lang es"
+                ><strong>Puesto:</strong> Gestora Telefónica
+                Administrativa</span
+              >
+              <span class="toggle-lang en hidden"
+                ><strong>Position:</strong> Administrative Telephone
+                Manager</span
+              >
             </p>
             <p>
-              <span class="toggle-lang es">
-                <strong>Fechas:</strong> Septiembre 2017 - Julio 2023
-              </span>
-              <span class="toggle-lang en hidden">
-                <strong>Dates:</strong> September 2017 - July 2023
-              </span>
+              <span class="toggle-lang es"
+                ><strong>Fechas:</strong> Septiembre 2017 - Julio 2023</span
+              >
+              <span class="toggle-lang en hidden"
+                ><strong>Dates:</strong> September 2017 - July 2023</span
+              >
             </p>
             <p>
               <span class="toggle-lang es">
@@ -252,20 +285,20 @@
           <div class="job">
             <h3>Barnof Consulting Inmobiliario</h3>
             <p>
-              <span class="toggle-lang es">
-                <strong>Puesto:</strong> Comercial Inmobiliaria
-              </span>
-              <span class="toggle-lang en hidden">
-                <strong>Position:</strong> Real Estate Agent
-              </span>
+              <span class="toggle-lang es"
+                ><strong>Puesto:</strong> Comercial Inmobiliaria</span
+              >
+              <span class="toggle-lang en hidden"
+                ><strong>Position:</strong> Real Estate Agent</span
+              >
             </p>
             <p>
-              <span class="toggle-lang es">
-                <strong>Fechas:</strong> Junio 2016 - Enero 2017
-              </span>
-              <span class="toggle-lang en hidden">
-                <strong>Dates:</strong> June 2016 - January 2017
-              </span>
+              <span class="toggle-lang es"
+                ><strong>Fechas:</strong> Junio 2016 - Enero 2017</span
+              >
+              <span class="toggle-lang en hidden"
+                ><strong>Dates:</strong> June 2016 - January 2017</span
+              >
             </p>
             <p>
               <span class="toggle-lang es">
@@ -287,13 +320,12 @@
             <ul>
               <li>
                 <strong>Wallashop</strong>
-                <span class="toggle-lang es"
-                  >Desarrollo de una aplicación de e-commerce utilizando
-                  React.</span
-                >
-                <span class="toggle-lang en hidden"
-                  >Development of an e-commerce application using React.</span
-                >
+                <span class="toggle-lang es">
+                  Desarrollo de una aplicación de e-commerce utilizando React.
+                </span>
+                <span class="toggle-lang en hidden">
+                  Development of an e-commerce application using React.
+                </span>
                 <a
                   href="https://github.com/SyraDominguez/Wallashop-React"
                   target="_blank"
@@ -309,13 +341,13 @@
               </li>
               <li>
                 <strong>Nodepop</strong>
-                <span class="toggle-lang es"
-                  >Plataforma de anuncios clasificados construida con Node.js y
-                  MongoDB.</span
-                >
-                <span class="toggle-lang en hidden"
-                  >Classified ads platform built with Node.js and MongoDB.</span
-                >
+                <span class="toggle-lang es">
+                  Plataforma de anuncios clasificados construida con Node.js y
+                  MongoDB.
+                </span>
+                <span class="toggle-lang en hidden">
+                  Classified ads platform built with Node.js and MongoDB.
+                </span>
                 <a
                   href="https://github.com/SyraDominguez/nodepop-avanzado"
                   target="_blank"
@@ -331,14 +363,14 @@
               </li>
               <li>
                 <strong>CS3000:</strong>
-                <span class="toggle-lang es"
-                  >Simulador de un wallet de Criptomonedas. (Python, Flask,
-                  Javascript & APIrest)</span
-                >
-                <span class="toggle-lang en hidden"
-                  >Cryptocurrency wallet simulator. (Python, Flask, Javascript &
-                  APIrest)</span
-                >
+                <span class="toggle-lang es">
+                  Simulador de un wallet de Criptomonedas. (Python, Flask,
+                  Javascript & APIrest)
+                </span>
+                <span class="toggle-lang en hidden">
+                  Cryptocurrency wallet simulator. (Python, Flask, Javascript &
+                  APIrest)
+                </span>
                 <a
                   href="https://github.com/SyraDominguez/CS3000"
                   target="_blank"
@@ -352,42 +384,6 @@
                   >View repository</a
                 >
               </li>
-              <!-- <li>
-                <strong>Pixelina Portfolio:</strong>
-                <span class="toggle-lang es"
-                  >Portafolio personal desarrollado con HTML, CSS y
-                  JavaScript.</span
-                >
-                <span class="toggle-lang en hidden"
-                  >Personal portfolio developed with HTML, CSS, and
-                  JavaScript.</span
-                >
-                <a
-                  href="https://github.com/SyraDominguez/pixelinaportfolio"
-                  target="_blank"
-                  class="toggle-lang es"
-                  >Ver repositorio</a
-                >
-                <a
-                  href="https://github.com/SyraDominguez/pixelinaportfolio"
-                  target="_blank"
-                  class="toggle-lang en hidden"
-                  >View repository</a
-                >
-                |
-                <a
-                  href="https://syradominguez.github.io/pixelinaportfolio/"
-                  target="_blank"
-                  class="toggle-lang es"
-                  >Ver sitio web</a
-                >
-                <a
-                  href="https://syradominguez.github.io/pixelinaportfolio/"
-                  target="_blank"
-                  class="toggle-lang en hidden"
-                  >View website</a
-                >
-              </li> -->
             </ul>
           </section>
         </section>
@@ -415,6 +411,6 @@
         </section>
       </main>
     </div>
-    <script src="./components/js/script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
