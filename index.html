@@ -22,8 +22,7 @@
   </head>
   <body>
     <div class="container">
-      <aside class="sidebar" id="contact-info-aside">
-        <!-- <button id="toggle-aside-button" onclick="toggleAside()">☰</button> -->
+      <aside class="sidebar collapsed" id="contact-info-aside">
         <div class="photo">
           <img
             id="toggle-aside-button"
@@ -32,14 +31,7 @@
             onclick="toggleAside()"
           />
         </div>
-
-        <!-- <div class="photo">
-          <img
-            src="./images/Logo2.png"
-            alt="Foto de Silvia Ramírez Domínguez"
-          />
-        </div> -->
-        <!-- <div class="header-buttons">
+        <div class="header-buttons collapsed-buttons">
           <button
             id="lang-button"
             onclick="toggleLanguage()"
@@ -60,7 +52,7 @@
           <button onclick="downloadPDF()" title="Download PDF">
             <i class="fas fa-file-pdf"></i>
           </button>
-        </div> -->
+        </div>
         <div class="contact-info">
           <h2 class="toggle-lang es">Contacto</h2>
           <h2 class="toggle-lang en hidden">Contact</h2>
@@ -131,7 +123,7 @@
           <p class="toggle-lang en hidden">
             Passionate about technology and personal development.
           </p>
-          <div class="header-buttons">
+          <div class="header-buttons hidden">
             <button
               id="lang-button"
               onclick="toggleLanguage()"
@@ -319,6 +311,27 @@
           <h2 class="toggle-lang en hidden">Portfolio</h2>
           <section class="projects">
             <ul>
+              <li>
+                <strong>CV Personal:</strong>
+                <span class="toggle-lang es">
+                  Desarrollo de este CV personal utilizando HTML, CSS y
+                  JavaScript.
+                </span>
+                <span class="toggle-lang en hidden">
+                  Development of this personal CV using HTML, CSS, and
+                  JavaScript.
+                </span>
+                <a
+                  href="https://syradominguez.github.io/my-cv/"
+                  target="_blank"
+                  class="toggle-lang es"
+                ></a>
+                <a
+                  href="https://syradominguez.github.io/my-cv/"
+                  target="_blank"
+                  class="toggle-lang en hidden"
+                ></a>
+              </li>
               <li>
                 <strong>Wallashop</strong>
                 <span class="toggle-lang es">

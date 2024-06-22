@@ -11,9 +11,9 @@ function updateLanguageButton() {
   var langButton = document.getElementById('lang-button');
 
   if (isEnglish) {
-    langButton.innerHTML = '<img src="../images/Google_Translate_Icon.png" alt="Google Translate Icon">';
+    langButton.innerHTML = '<img src="./images/Google_Translate_Icon.png" alt="Google Translate Icon">';
   } else {
-    langButton.innerHTML = '<img src="../images/Google_Translate_Icon.png" alt="Google Translate Icon">';
+    langButton.innerHTML = '<img src="./images/Google_Translate_Icon.png" alt="Google Translate Icon">';
   }
 }
 
@@ -38,7 +38,6 @@ function updateThemeButton() {
     themeButton.innerHTML = '<i class="fas fa-moon"></i>';
   }
 }
-
 
 function downloadPDF() {
   var element = document.getElementById("cv-content");
@@ -65,9 +64,6 @@ function downloadPDF() {
       ${topSkills.map(skill => `<li>${skill.innerHTML}</li>`).join('')}
     </ul>
   `;
-
-  // Añadir el contenido del aside a la tarjeta de contacto en columnas
-
 
   // Añadir el contenido del aside a la tarjeta de contacto en columnas
   contactCard.innerHTML = `
@@ -130,21 +126,6 @@ function downloadPDF() {
   });
 }
 
-function toggleAside() {
-  var aside = document.getElementById('contact-info-aside');
-  var logo = document.getElementById('toggle-aside-button');
-
-  aside.classList.toggle('collapsed');
-
-  if (aside.classList.contains('collapsed')) {
-    logo.style.width = '80px';
-    logo.style.height = '80px';
-  } else {
-    logo.style.width = '150px';
-    logo.style.height = '150px';
-  }
-}
-
 // Función para mostrar secciones con animación
 function showSections() {
   document.querySelectorAll('.section').forEach(function (section) {
@@ -158,6 +139,7 @@ function showSections() {
 document.addEventListener('DOMContentLoaded', function () {
   showSections();
   updateLanguageButton();
+
   // Comprobar la preferencia guardada
   const savedTheme = localStorage.getItem('theme');
   if (savedTheme) {
@@ -171,8 +153,42 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
   updateThemeButton();
-  toggleAside(); // Para asegurar que el aside esté oculto al cargar la página
+
+  // Inicializa el estado del aside
+  var aside = document.getElementById('contact-info-aside');
+  var headerButtons = document.querySelector('header .header-buttons');
+  var asideButtons = aside.querySelector('.header-buttons');
+
+  if (aside.classList.contains('collapsed')) {
+    headerButtons.classList.remove('hidden');
+    asideButtons.classList.add('hidden');
+  } else {
+    headerButtons.classList.add('hidden');
+    asideButtons.classList.remove('hidden');
+  }
 });
+
+// Función para alternar el aside
+function toggleAside() {
+  var aside = document.getElementById('contact-info-aside');
+  var logo = document.getElementById('toggle-aside-button');
+  var headerButtons = document.querySelector('header .header-buttons');
+  var asideButtons = aside.querySelector('.header-buttons');
+
+  aside.classList.toggle('collapsed');
+
+  if (aside.classList.contains('collapsed')) {
+    logo.style.width = '80px';
+    logo.style.height = '80px';
+    headerButtons.classList.remove('hidden');
+    asideButtons.classList.add('hidden');
+  } else {
+    logo.style.width = '150px';
+    logo.style.height = '150px';
+    headerButtons.classList.add('hidden');
+    asideButtons.classList.remove('hidden');
+  }
+}
 
 // Mostrar secciones al hacer scroll
 document.addEventListener('scroll', showSections);

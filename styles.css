@@ -81,6 +81,7 @@ body.dark-theme {
   margin: 10px 0;
 }
 
+
 .sidebar a {
   color: #fff;
   text-decoration: none;
@@ -102,23 +103,34 @@ body.dark-theme {
 .header-buttons {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  /* Espacio entre los botones */
+  gap: 5px;
+  /* Reduce el espacio entre los botones */
   margin-top: 10px;
+}
+
+.header-buttons.hidden {
+  display: none;
+}
+
+.header-buttons.collapsed-buttons {
+  flex-direction: row;
 }
 
 .header-buttons button {
   background: #0056b3;
   color: #fff;
   border: none;
-  padding: 10px;
+  padding: 5px;
+  /* Reduce el tamaño del relleno */
   cursor: pointer;
   transition: transform 0.2s;
   border-radius: 5px;
-  /* Esquinas redondeadas */
-  font-size: 16px;
-  width: 40px;
-  height: 40px;
+  font-size: 14px;
+  /* Reduce el tamaño de la fuente */
+  width: 30px;
+  /* Reduce el ancho */
+  height: 30px;
+  /* Reduce la altura */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -223,7 +235,6 @@ footer {
   justify-content: space-between;
   align-items: flex-start;
   gap: 25px;
-  /* Más espacio entre las columnas */
 }
 
 .contact-photo {
@@ -238,22 +249,18 @@ footer {
   display: block;
   margin-top: 8px;
   margin-left: 15px;
-  border: 2px solid black;
+  border: 5px solid black;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
-  /* Efecto de sombra para simular relieve interior */
 }
 
-/* Aplicar los estilos tanto en modo claro como oscuro */
 .light-theme .photo img,
 .dark-theme .photo img {
-  border: 2px solid black;
+  border: 5px solid black;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
-  /* Efecto de sombra para simular relieve interior */
 }
 
 .contact-personal {
   flex: 1.5;
-  /* Aumenta la proporción */
 }
 
 .contact-personal h2 {
@@ -266,7 +273,6 @@ footer {
 .contact-personal p {
   margin: 3px 0;
   padding-left: 10px;
-  /* Añadir sangría a la derecha */
 }
 
 .contact-other {
@@ -276,12 +282,10 @@ footer {
 
 .contact-other p {
   padding-left: 10px;
-  /* Añadir sangría a la derecha */
 }
 
 .contact-details {
   flex: 2.5;
-  /* Aumenta la proporción */
 }
 
 .contact-card h3 {
@@ -301,7 +305,6 @@ footer {
   margin: 3px 0;
 }
 
-/* Estilos para el botón de alternancia */
 #toggle-aside-button {
   cursor: pointer;
   border-radius: 50%;
