@@ -12,6 +12,9 @@ function showSection(sectionId) {
   var icon = document.querySelector(`[data-section="${sectionId}"]`);
   var iconRect = icon.getBoundingClientRect();
 
+  // Ocultar todas las tarjetas antes de mostrar la nueva
+  hideAllCards();
+
   // Ajustar posición
   sectionCard.style.top = (iconRect.top + window.scrollY) + 'px';
   sectionCard.style.left = (iconRect.right + 10) + 'px';
